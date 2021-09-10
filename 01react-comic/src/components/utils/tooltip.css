@@ -1,0 +1,47 @@
+.comic-app-util-tooltip {
+	position: relative;
+	display: inline-block;
+	color: white;
+}
+
+.comic-app-util-tooltip .comic-app-util-tooltiptext {
+	visibility: hidden;
+	background-color: rgba(0,0,0, 0.8);
+	color: white;
+	width: 160px;
+	border-radius: 6px;
+	padding: 5px 5px;
+	position: absolute;
+	/* z-index: 1; */
+}
+
+.comic-app-util-tooltip .comic-app-util-tooltiptext.top {
+	bottom: 100%;
+	left: 50%;
+	margin-left: -60px;
+}
+.comic-app-util-tooltip .comic-app-util-tooltiptext.bottom {
+	top: 100%;
+	left: 50%;
+	margin-left: -60px;
+}
+.comic-app-util-tooltip .comic-app-util-tooltiptext.right {
+	top: -5px;
+	left: 105%;
+}
+.comic-app-util-tooltip .comic-app-util-tooltiptext.left {
+	top: -5px;
+	right: 105%;
+}
+
+/* @supports (-webkit-text-stroke: 1px black) {
+	.comic-app-util-tooltip .comic-app-util-tooltiptext {
+		-webkit-text-stroke: 1px white;
+		-webkit-text-fill-color: black;
+	}
+} */
+
+.comic-app-util-tooltip:hover .comic-app-util-tooltiptext {
+	visibility: visible;
+}
+
