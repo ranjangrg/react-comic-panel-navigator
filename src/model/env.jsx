@@ -1,7 +1,24 @@
 
+
+/*
+original image sources /w links
+Website: comicbookplus.com
+1st page: 
+https://box01.comicbookplus.com/viewer/0f/0f018245506fbefbd70fa046cfe44eaa/59.jpg
+2nd page:
+https://box01.comicbookplus.com/viewer/0f/0f018245506fbefbd70fa046cfe44eaa/60.jpg
+3rd page:
+https://box01.comicbookplus.com/viewer/0f/0f018245506fbefbd70fa046cfe44eaa/61.jpg
+*/
+const pageLinks = [
+	"https://box01.comicbookplus.com/viewer/0f/0f018245506fbefbd70fa046cfe44eaa/59.jpg",
+	"https://box01.comicbookplus.com/viewer/0f/0f018245506fbefbd70fa046cfe44eaa/60.jpg",
+	"https://box01.comicbookplus.com/viewer/0f/0f018245506fbefbd70fa046cfe44eaa/61.jpg",
+];
 const comicData = [
 	{
-		"pageUrl": "/comic-sample-0.jpg", 
+		// "pageUrl": "/comic-sample-0.jpg", 
+		"pageUrl": pageLinks[0], 
 		"panelData": [
 			{"id":"1","x":"25","y":"25","width":"359","height":"380"},
 			{"id":"2","x":"385","y":"21","width":"147","height":"382"},
@@ -14,7 +31,8 @@ const comicData = [
 		],
 		"naturalDims": {naturalHeight: 1233, naturalWidth: 905}
 	}, {
-		"pageUrl": "/comic-sample-1.jpg", 
+		// "pageUrl": "/comic-sample-1.jpg", 
+		"pageUrl": pageLinks[1], 
 		"panelData": [
 			{"id":"1","x":"30","y":"19","width":"565","height":"395"},
 			{"id":"2","x":"599","y":"21","width":"277","height":"396"},
@@ -26,7 +44,8 @@ const comicData = [
 		],
 		"naturalDims": {naturalHeight: 1233, naturalWidth: 905}
 	}, {
-		"pageUrl": "/comic-sample-2.jpg", 
+		// "pageUrl": "/comic-sample-2.jpg", 
+		"pageUrl": pageLinks[2], 
 		"panelData": [
 			{"id":"1","x":"29","y":"22","width":"359","height":"393"},
 			{"id":"2","x":"384","y":"21","width":"503","height":"409"},
