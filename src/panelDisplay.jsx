@@ -5,7 +5,7 @@ import PanelImage from './panelImage';
 import PanelInfo from './panelInfo';
 import PanelNav from './panelNav';
 
-import { changeCurrentPanel, toggleMenuVisibility } from './actions';
+import { toggleMenuVisibility } from './actions';
 
 import { NavigationContext } from './contexts/navigator';
 
@@ -19,19 +19,16 @@ import { NavigationContext } from './contexts/navigator';
 
 function PanelDisplay() {
 	// const { comicData } = useContext(NavigationContext);
-	const { comicData, gotoPrevPage, gotoNextPage, 
-		gotoPrevPanel, gotoNextPanel, 
+	const { comicData, gotoPrevPanel, gotoNextPanel, 
 		toggleFullPageView } = useContext(NavigationContext);
 	const appSettings = useSelector(state => state.appSettings);
-	const currentPanelIdx = useSelector(state => state.currentPanelIdx);
-	const currentPageIdx = useSelector(state => state.currentPageIdx);
 	const dispatch = useDispatch();
 
 	const rootStyles = {
 		position: "relative",
 		display: "inline-block",
-		width: appSettings.width,
-		height: appSettings.height,
+		width: parseFloat(appSettings.width),
+		height: parseFloat(appSettings.height),
 		overflow: "hidden",
 		backgroundColor: appSettings.backgroundColor,
 	};

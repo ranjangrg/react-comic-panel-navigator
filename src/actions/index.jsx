@@ -9,7 +9,7 @@ const changeAppSettings = (newSettings) => {
 const changeCurrentPage = (newPageIdx) => {
 	return {
 		type: "CHANGE_PAGE",
-		payload: newPageIdx
+		payload: parseInt(newPageIdx)
 	};
 }
 
@@ -23,28 +23,28 @@ const loadComicData = (newComicData) => {
 const changeCurrentPanel = (newPanelIdx) => {
 	return {
 		type: "CHANGE_PANEL",
-		payload: newPanelIdx
+		payload: String(newPanelIdx)
 	};
 };
 
 const changeCurrentView = (newView) => {
 	return {
 		type: "CHANGE_VIEW",
-		payload: newView
+		payload: parseInt(newView)
 	};
 };
 
 const changePageImageLoaded = (isLoaded) => {
 	return {
 		type: "IMAGE_LOADED",
-		imageLoaded: isLoaded
+		imageLoaded: Boolean(isLoaded)
 	};
 };
 
 const toggleMenuVisibility = (isVisible) => {
 	return {
 		type: "MENU_VISIBLE",
-		payload: isVisible
+		payload: Boolean(isVisible)
 	};
 };
 

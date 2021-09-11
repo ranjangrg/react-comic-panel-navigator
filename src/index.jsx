@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 
 import '../style.css';
 import allReducers from './reducers';
-
 import AppWrapper from './appWrapper';
 
 const appStore = createStore(
@@ -14,7 +13,7 @@ const appStore = createStore(
 
 function ComicPanelNavigatorApp(props) {
 	return (<Provider store={appStore}>
-		<AppWrapper />
+		<AppWrapper settings={props}/>
 	</Provider>);
 }
 

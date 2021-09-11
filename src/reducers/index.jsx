@@ -6,6 +6,11 @@ const defaultAppSettings = {
 	// ref: https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 	backgroundColor: "#121212"
 };
+// const defaultAppSettings_large = {
+// 	width: 1180, height: 650, menuVisibilityDuration: 1500,
+// 	// ref: https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
+// 	backgroundColor: "#121212"
+// };
 const appSettingsReducer = (initial_state = defaultAppSettings, action) => {
 	switch (action.type) {
 		case "APP_SETTINGS_UPDATE":
