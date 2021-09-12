@@ -10,12 +10,12 @@ const NavigationContext = createContext({});
 
 const NavigationProvider = (props) => {
 	const [comicData, changeComicData] = useState(new ComicData());
-	const currentPageIdx = useSelector(state => state.currentPageIdx);
-	const currentPanelIdx = useSelector(state => state.currentPanelIdx);
-	const currentView = useSelector(state => state.currentView);
-	const currentPageImageLoaded = useSelector(state => state.currentPageImageLoaded);
-	const menuVisibile = useSelector(state => state.menuVisibility.visible);
-	const appSettings = useSelector(state => state.appSettings);
+	const currentPageIdx = useSelector(state => state.comicApp.currentPageIdx);
+	const currentPanelIdx = useSelector(state => state.comicApp.currentPanelIdx);
+	const currentView = useSelector(state => state.comicApp.currentView);
+	const currentPageImageLoaded = useSelector(state => state.comicApp.currentPageImageLoaded);
+	const menuVisibile = useSelector(state => state.comicApp.menuVisibility.visible);
+	const appSettings = useSelector(state => state.comicApp.appSettings);
 
 	const pageImageLoadedPrmRef = useRef();
 	const imgElemRef = useRef(document.getElementById("panel-img"));
@@ -143,7 +143,7 @@ const NavigationProvider = (props) => {
 	}, [
 		currentPanelIdx, currentPageIdx, appSettings,
 		comicData, currentPageImageLoaded, dispatch
-	]); // eslint-disable-line react-hooks/exhaustive-deps
+	]);
 	return (<NavigationContext.Provider value={{
 		comicData,
 		gotoPage, gotoPrevPage, gotoNextPage,

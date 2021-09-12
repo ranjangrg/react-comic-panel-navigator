@@ -21,7 +21,7 @@ function PanelDisplay() {
 	// const { comicData } = useContext(NavigationContext);
 	const { comicData, gotoPrevPanel, gotoNextPanel, 
 		toggleFullPageView } = useContext(NavigationContext);
-	const appSettings = useSelector(state => state.appSettings);
+	const appSettings = useSelector(state => state.comicApp.appSettings);
 	const dispatch = useDispatch();
 
 	const rootStyles = {

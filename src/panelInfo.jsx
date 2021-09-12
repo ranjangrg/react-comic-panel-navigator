@@ -18,12 +18,12 @@ const tableStyles = {
 
 function PanelInfo(props) {
 	const { comicData } = useContext(NavigationContext);
-	const currentPageIdx = useSelector(state => state.currentPageIdx);
-	const currentPanelIdx = useSelector(state => state.currentPanelIdx);
-	const currentPageImageLoaded = useSelector(state => state.currentPageImageLoaded);
-	const menuVisibile = useSelector(state => state.menuVisibility.visible);
+	const currentPageIdx = useSelector(state => state.comicApp.currentPageIdx);
+	const currentPanelIdx = useSelector(state => state.comicApp.currentPanelIdx);
+	const currentPageImageLoaded = useSelector(state => state.comicApp.currentPageImageLoaded);
+	const menuVisibile = useSelector(state => state.comicApp.menuVisibility.visible);
 
-	const currentPanelData = useSelector(state => comicData.getPanelData(state.currentPageIdx, state.currentPanelIdx));
+	const currentPanelData = useSelector(state => comicData.getPanelData(state.comicApp.currentPageIdx, state.comicApp.currentPanelIdx));
 
 	const currentPanelDataRef = useRef(comicData.getPanelData(currentPageIdx, currentPanelIdx));
 	useEffect( () => {

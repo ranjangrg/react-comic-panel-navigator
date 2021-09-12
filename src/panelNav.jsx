@@ -33,7 +33,7 @@ function PanelNav(props) {
 	const { gotoPrevPage, gotoNextPage, 
 		gotoPrevPanel, gotoNextPanel, 
 		toggleFullPageView, getVisibility } = useContext(NavigationContext);
-	const currentView = useSelector(state => state.currentView);
+	const currentView = useSelector(state => state.comicApp.currentView);
 
 	return (<div style={{...styles.panel, ...{visibility: getVisibility()}}}>
 		<div style={styles.navContainer}> 

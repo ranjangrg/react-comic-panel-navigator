@@ -8,7 +8,7 @@ import { NavigationProvider } from './contexts/navigator';
 import { changeAppSettings } from './actions';
 
 function AppWrapper(props) {
-	const appSettings = useSelector(state => state.appSettings);
+	const appSettings = useSelector(state => state.comicApp.appSettings);
 	const dispatch = useDispatch();
 	useEffect( () => {
 		const newAppSettings = {...appSettings, ...props.settings};

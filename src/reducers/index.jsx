@@ -86,7 +86,7 @@ const menuVisibilityReducer = (initial_state=true, action) => {
 	}
 };
 
-const allReducers = combineReducers({
+const comicAppReducer = combineReducers({
 	appSettings: appSettingsReducer,
 	currentPageIdx: currentPageIdxReducer,
 	comicData: comicDataReducer,
@@ -95,6 +95,10 @@ const allReducers = combineReducers({
 	currentImageMod: currentImageModReducer,
 	currentPageImageLoaded: pageImageLoadedReducer,
 	menuVisibility: menuVisibilityReducer
+});
+
+const allReducers = combineReducers({
+	comicApp: comicAppReducer
 });
 
 export { PanelViews };

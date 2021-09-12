@@ -11,10 +11,10 @@ import { NavigationContext } from './contexts/navigator';
 
 function PanelImage(props) {
 	const { comicData } = useContext(NavigationContext);
-	const currentPageIdx = useSelector(state => state.currentPageIdx);
-	const currentPanelIdx = useSelector(state => state.currentPanelIdx);
-	const currentView = useSelector(state => state.currentView);
-	const appSettings = useSelector(state => state.appSettings);
+	const currentPageIdx = useSelector(state => state.comicApp.currentPageIdx);
+	const currentPanelIdx = useSelector(state => state.comicApp.currentPanelIdx);
+	const currentView = useSelector(state => state.comicApp.currentView);
+	const appSettings = useSelector(state => state.comicApp.appSettings);
 	const dispatch = useDispatch();
 
 	const styles = {
